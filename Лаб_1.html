@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <style>
+        h1{text-align: center;}
+        mark {
+    background: #ffec82;
+    border: 1px dashed #333;
+   }
+    </style>
+</head>
+<body>
+    <h1>Я,<mark>Симакин Алексей</mark>, изучаю HTML5</h1>
+    <video controls="true">
+        <source src="movie.mp4" type="video/mp4" />
+    </video>
+    <audio id="sound" src="https://html5book.ru/examples/media/track.mp3" preload="auto" controls></audio>
+    <input type="button" value=" Координаты" onclick ="getCoordinates()">
+    <script>
+        function getCoordinates() {
+        navigator.geolocation.getCurrentPosition(showCoordinates);
+        }
+        function showCoordinates(position) {
+        document.write("Широта:" + position.coords.latitude + "<br/>");
+        document.write("Долгота:" + position.coords.longitude);
+        }
+    </script>
+</body>
+</html>
